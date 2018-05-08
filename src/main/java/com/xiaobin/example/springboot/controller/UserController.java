@@ -33,11 +33,10 @@ public class UserController {
     @RequestMapping("/all")
     public String getUser(Model model) {
         UserExample userExample = new UserExample();
-//        userExample.createCriteria().andIdEqualTo(2L);
-        userExample.createCriteria().andIdIsNotNull();
+        userExample.createCriteria().andIdEqualTo(2L);
         List<User> all = userMapper.selectByExample(userExample);
         model.addAttribute("all", all);
-        System.out.println(all.toString());
+        System.out.println(all);
         return "user";
     }
 
