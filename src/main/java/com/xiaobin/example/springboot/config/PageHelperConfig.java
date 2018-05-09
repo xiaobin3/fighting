@@ -10,7 +10,6 @@ import java.util.Properties;
  * Created with IntelliJ IDEA.
  * User: xiaobin3
  *
- * @author : xiaob
  * Email: xiaobin3@asiainfo.com
  * Date: 2018/5/7
  * Time: 22:33

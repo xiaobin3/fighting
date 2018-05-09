@@ -45,3 +45,11 @@ tomcat也没有运行。寻找原因，看了下pom.xml文件中tomcat依赖关�
         <scope>provided</scope>
     </dependency>
 解决：将<scope>provided</scope>注释掉
+
+
+工程进度：
+1.SpringBoot 2.0.1.RELEASE
+2.数据库mysql  6.0.6
+3.集成mybatis 1.3.1
+4.集成druid 1.1.6  + 监控（http://localhost:8080/druid/index.html）
+  参考：https://www.jianshu.com/p/9c58c84e285a
