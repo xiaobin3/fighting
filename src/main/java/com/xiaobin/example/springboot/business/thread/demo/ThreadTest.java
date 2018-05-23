@@ -25,12 +25,24 @@ public class ThreadTest {
         ThreadTest4 threadTest4 = new ThreadTest4();
         Thread thread = new Thread(threadTest4);
 
+        Thread currentThread = Thread.currentThread();
+        System.out.println("-----------------"+currentThread.getName());
+        System.out.println("-----------------"+threadTest1.getName());
+        System.out.println("-----------------"+threadTest2.getName());
+        System.out.println("-----------------"+threadTest3.getName());
+        System.out.println("-----------------"+thread.getName());
+
+        //守护线程，必须在线程执行之前设置
+        //被守护的线程执行完后守护线程也就执行结束了
+        threadTest2.setDaemon(true);
 
 //        threadTest1.run();
+        threadTest1.setPriority(Thread.MIN_PRIORITY);
         threadTest1.start();
         threadTest2.start();
         threadTest3.start();
 
+        thread.setPriority(Thread.MAX_PRIORITY);
         thread.start();
 
         for (int i = 0; i <= 10; i++) {

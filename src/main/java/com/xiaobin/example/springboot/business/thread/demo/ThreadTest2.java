@@ -27,7 +27,7 @@ public class ThreadTest2 extends Thread {
      */
     @Override
     public void run() {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 100; i++) {
             System.out.println("我是ThreadTest2重写的run!======>" + i);
         }
     }
